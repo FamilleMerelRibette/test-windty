@@ -55,8 +55,8 @@
           <!-- Menu desktop -->
           <div class="hidden md:flex space-x-8">
             {%- for entry in collections.all | eleventyNavigation %}
-            <a href="{{ entry.url | url }}" 
-               class="py-4 px-2 text-gray-500 font-semibold hover:text-gray-900 transition duration-300 uppercase tracking-wider{% if entry.url == page.url %} text-gray-900 border-b-2 border-gray-900{% endif %}">
+            <a href="{{ entry.url | url }}"
+               class="py-4 px-20 text-gray-500 font-semibold hover:text-gray-900 transition duration-300 uppercase tracking-wider{% if entry.url == page.url %} text-gray-900 border-b-2 border-gray-900{% endif %}">
               {{ entry.title }}
             </a>
             {%- endfor %}
@@ -67,7 +67,7 @@
         <div id="mobile-menu" class="md:hidden hidden fixed inset-0 bg-white z-50">
           <div class="flex flex-col items-center justify-center h-full space-y-8">
             {%- for entry in collections.all | eleventyNavigation %}
-            <a href="{{ entry.url | url }}" 
+            <a href="{{ entry.url | url }}"
                class="text-2xl font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200 uppercase tracking-wider{% if entry.url == page.url %} text-gray-900{% endif %}">
               {{ entry.title }}
             </a>
@@ -87,7 +87,7 @@
         const menuOpen = document.querySelector('.menu-open');
         const menuClose = document.querySelector('.menu-close');
         const isExpanded = this.getAttribute('aria-expanded') === 'true';
-        
+
         this.setAttribute('aria-expanded', !isExpanded);
         mobileMenu.classList.toggle('hidden');
         menuOpen.classList.toggle('hidden');
