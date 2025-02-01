@@ -64,11 +64,11 @@
         </div>
 
         <!-- Menu mobile -->
-        <div id="mobile-menu" class="md:hidden hidden">
-          <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <div id="mobile-menu" class="md:hidden hidden fixed inset-0 bg-white z-50">
+          <div class="flex flex-col items-center justify-center h-full space-y-8">
             {%- for entry in collections.all | eleventyNavigation %}
             <a href="{{ entry.url | url }}" 
-               class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50{% if entry.url == page.url %} bg-gray-100{% endif %}">
+               class="text-2xl font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200{% if entry.url == page.url %} text-gray-900{% endif %}">
               {{ entry.title }}
             </a>
             {%- endfor %}
