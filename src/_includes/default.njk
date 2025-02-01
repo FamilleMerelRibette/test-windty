@@ -38,6 +38,16 @@
   </head>
 
   <body class="font-sans leading-normal tracking-normal text-gray-900">
+    <nav>
+      <ul>
+      {%- for entry in collections.all | eleventyNavigation %}
+        <li{% if entry.url == page.url %} class="active"{% endif %}>
+          <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+        </li>
+      {%- endfor %}
+      </ul>
+    </nav>
+
     {{ content | safe }}
   </body>
 </html>

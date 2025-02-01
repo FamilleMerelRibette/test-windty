@@ -1,7 +1,10 @@
 const fs = require("fs");
 const htmlmin = require("html-minifier-terser");
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 module.exports = function(eleventyConfig) {
+  // Add navigation plugin
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
   if (process.env.ELEVENTY_PRODUCTION) {
     eleventyConfig.addTransform("htmlmin", htmlminTransform);
