@@ -16,6 +16,11 @@ module.exports = function(eleventyConfig) {
   // Watch targets
   eleventyConfig.addWatchTarget("./src/styles/");
 
+  // Collections
+  eleventyConfig.addCollection("spectacles", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/spectacles/*.md");
+  });
+
   var pathPrefix = "";
   if (process.env.GITHUB_REPOSITORY) {
     pathPrefix = process.env.GITHUB_REPOSITORY.split('/')[1];
