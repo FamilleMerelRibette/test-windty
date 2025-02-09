@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Grand Spectacle d'Hiver
 date: 2025-12-20
 eleventyNavigation:

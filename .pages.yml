@@ -1,0 +1,59 @@
+media: public/img
+content:
+  - name: posts
+    label: Posts
+    type: collection
+    path: content/blog
+    view:
+      fields: [title, draft, date]
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: description, label: Description, type: string }
+      - { name: date, label: Date, type: date }
+      - { name: draft, label: Draft, type: boolean }
+      - { name: tags, label: Tags, type: string, list: true }
+      - { name: body, label: Body, type: rich-text }
+  - name: spectacles
+    label: Spectacles
+    type: collection
+    path: content/spectacles
+    view:
+      fields: [title, draft, date]
+    fields:
+      - {
+          name: layout,
+          type: string,
+          hidden: true,
+          default: layouts/spectacle.njk,
+        }
+      - { name: title, label: Titre, type: string, required: true }
+      - { name: description, label: Description, type: string }
+      - name: eleventyNavigation
+        label: Navigation
+        type: object
+        fields:
+          - { name: parent, label: Menu, type: string }
+          - { name: key, label: Page, type: string }
+          - { name: order, label: Order, type: number }
+      - { name: date, label: Date, type: date }
+      - { name: draft, label: Brouillon, type: boolean }
+      - { name: tags, label: Tags, type: string, list: true }
+      - { name: body, label: Contenu, type: rich-text }
+  - name: a-propos
+    label: A Propos
+    type: file
+    path: content/a-propos/index.md
+    fields:
+      - { name: layout, type: string, hidden: true, default: layouts/base.njk }
+      - name: eleventyNavigation
+        label: Navigation
+        type: object
+        fields:
+          - { name: key, label: Key, type: string }
+          - { name: order, label: Order, type: number }
+      - { name: body, label: Body, type: rich-text }
+  - name: metadata
+    label: Metadata
+    type: file
+    path: src/_data/metadata.js
+    format: code

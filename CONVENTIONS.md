@@ -1,0 +1,1 @@
+- utilise les commandes npm plutôt que de modifier le fichier package.json
