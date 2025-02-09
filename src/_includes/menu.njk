@@ -42,6 +42,7 @@
 <script>
   document.getElementById('menu-toggle').addEventListener('click', function() {
     const mobileMenu = document.getElementById('mobile-menu');
+    const mainContent = document.getElementById('main-content');
     const menuOpen = document.querySelector('.menu-open');
     const menuClose = document.querySelector('.menu-close');
     const isExpanded = this.getAttribute('aria-expanded') === 'true';
@@ -50,5 +51,12 @@
     mobileMenu.classList.toggle('hidden');
     menuOpen.classList.toggle('hidden');
     menuClose.classList.toggle('hidden');
+    
+    // Gestion de l'opacité du contenu principal
+    if (!isExpanded) {
+      mainContent.style.opacity = '0';
+    } else {
+      mainContent.style.opacity = '1';
+    }
   });
 </script>

@@ -43,7 +43,7 @@
   <body class="font-sans leading-normal tracking-normal text-gray-900">
     {% include "menu.njk" %}
 
-    <div class="pt-16">
+    <div class="pt-16 transition-opacity duration-300" id="main-content">
       {{ content | safe }}
     </div>
   </body>
