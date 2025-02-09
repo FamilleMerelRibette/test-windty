@@ -1,3 +1,13 @@
+
+
+{%
+set menu = [
+    {titre: "composition", slug: "#composition"},
+    {titre: "spectacle", slug: "#spectacle"},
+    {titre: "concert", slug: "#concert"}
+]
+%}
+
 <nav class="bg-white/80 backdrop-blur-sm fixed w-full z-50">
   <div class="max-w-6xl mx-auto px-4">
     <div class="flex justify-between items-center h-16">
@@ -14,10 +24,10 @@
 
       <!-- Menu desktop -->
       <div class="hidden md:flex space-x-8">
-        {%- for entry in collections.all | eleventyNavigation %}
-        <a href="{{ entry.url | url }}"
+        {%- for entry in menu %}
+        <a href="{{ entry.slug | url }}"
            class="py-4 px-20 text-gray-500 font-semibold hover:text-gray-900 transition duration-300 uppercase tracking-wider{% if entry.url == page.url %} text-gray-900 border-b-2 border-gray-900{% endif %}">
-          {{ entry.title }}
+          {{ entry.titre }}
         </a>
         {%- endfor %}
       </div>
@@ -27,10 +37,10 @@
     <div id="mobile-menu" class="md:hidden hidden fixed inset-0 bg-white z-50">
       <div class="min-h-screen w-full flex flex-col items-center pt-24 space-y-8">
 
-        {%- for entry in collections.all | eleventyNavigation %}
-        <a href="{{ entry.url | url }}"
+        {%- for entry in menu %}
+        <a href="{{ entry.slug | url }}"
            class="text-2xl font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200 uppercase tracking-wider{% if entry.url == page.url %} text-gray-900{% endif %}">
-          {{ entry.title }}
+          {{ entry.titre }}
         </a>
         {%- endfor %}
 
@@ -51,7 +61,7 @@
     mobileMenu.classList.toggle('hidden');
     menuOpen.classList.toggle('hidden');
     menuClose.classList.toggle('hidden');
-    
+
     // Gestion de l'opacité du contenu principal
     if (!isExpanded) {
       mainContent.style.opacity = '0';

@@ -4,7 +4,7 @@ title: Grand Spectacle d'Hiver
 date: 2025-12-20
 eleventyNavigation:
   key: Grand Spectacle d'Hiver
-  parent: Spectacles
+  parent: Spectacle
 ---
 
 # Grand Spectacle d'Hiver

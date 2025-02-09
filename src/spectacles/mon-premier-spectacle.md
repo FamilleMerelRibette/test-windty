@@ -3,7 +3,7 @@ title: Mon Premier Spectacle
 date: 2025-03-15
 eleventyNavigation:
   key: Mon Premier Spectacle
-  parent: Spectacles
+  parent: Spectacle
 ---
 
 # Mon Premier Spectacle

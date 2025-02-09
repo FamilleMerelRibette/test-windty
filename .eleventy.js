@@ -1,9 +1,11 @@
 const fs = require("fs");
 const htmlmin = require("html-minifier-terser");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const { EleventyRenderPlugin } = require("@11ty/eleventy");
 
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
   // Add navigation plugin
+  eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
   if (process.env.ELEVENTY_PRODUCTION) {
@@ -17,29 +19,35 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/styles/");
 
   // Collections
-  eleventyConfig.addCollection("spectacles", function(collectionApi) {
+  eleventyConfig.addCollection("composition", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("src/composition/*.md");
+  });
+  eleventyConfig.addCollection("spectacle", function (collectionApi) {
     return collectionApi.getFilteredByGlob("src/spectacles/*.md");
+  });
+  eleventyConfig.addCollection("concert", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("src/concerts/*.md");
   });
 
   var pathPrefix = "";
   if (process.env.GITHUB_REPOSITORY) {
-    pathPrefix = process.env.GITHUB_REPOSITORY.split('/')[1];
+    pathPrefix = process.env.GITHUB_REPOSITORY.split("/")[1];
   }
 
   return {
     dir: {
-      input: "src"
+      input: "src",
     },
-    pathPrefix
-  }
+    pathPrefix,
+  };
 };
 
 function htmlminTransform(content, outputPath) {
-  if( outputPath.endsWith(".html") ) {
+  if (outputPath.endsWith(".html")) {
     let minified = htmlmin.minify(content, {
       useShortDoctype: true,
       removeComments: true,
-      collapseWhitespace: true
+      collapseWhitespace: true,
     });
     return minified;
   }
