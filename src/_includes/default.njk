@@ -47,5 +47,10 @@
     <div class="pt-16 transition-opacity duration-300" id="main-content">
       {{ content | safe }}
     </div>
+
+    <div class="pt-16 transition-opacity duration-300" id="composition-content">
+      {{ renderFile "./composition.html" }}
+    </div>
+
   </body>
 </html>
