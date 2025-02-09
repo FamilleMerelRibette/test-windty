@@ -44,12 +44,11 @@
   <body class="font-sans leading-normal tracking-normal text-gray-900">
     {% include "menu.njk" %}
 
-    <div class="pt-16 transition-opacity duration-300" id="main-content">
+    <div class="transition-opacity duration-300" id="main-content">
       {{ content | safe }}
-    </div>
-
-    <div class="pt-16 transition-opacity duration-300" id="composition-content">
-      {{ renderFile "./composition.html" }}
+      {% include "sections/composition.njk" %}
+      {% include "sections/spectacle.njk" %}
+      {% include "sections/concert.njk" %}
     </div>
 
   </body>
