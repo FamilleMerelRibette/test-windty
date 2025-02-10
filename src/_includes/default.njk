@@ -44,12 +44,7 @@
   <body class="font-sans leading-normal tracking-normal text-gray-900">
     {% include "menu.njk" %}
 
-    <div class="transition-opacity duration-300" id="main-content">
-      {{ content | safe }}
-      {% include "sections/composition.njk" %}
-      {% include "sections/spectacle.njk" %}
-      {% include "sections/concert.njk" %}
-    </div>
+    {{ content | safe }}
 
   </body>
 </html>

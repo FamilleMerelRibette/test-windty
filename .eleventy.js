@@ -19,13 +19,13 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/styles/");
 
   // Collections
-  eleventyConfig.addCollection("composition", function (collectionApi) {
+  eleventyConfig.addCollection("compositions", function (collectionApi) {
     return collectionApi.getFilteredByGlob("src/composition/*.md");
   });
-  eleventyConfig.addCollection("spectacle", function (collectionApi) {
+  eleventyConfig.addCollection("spectacles", function (collectionApi) {
     return collectionApi.getFilteredByGlob("src/spectacles/*.md");
   });
-  eleventyConfig.addCollection("concert", function (collectionApi) {
+  eleventyConfig.addCollection("concerts", function (collectionApi) {
     return collectionApi.getFilteredByGlob("src/concerts/*.md");
   });
 
