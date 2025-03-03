@@ -2,11 +2,18 @@ const fs = require("fs");
 const htmlmin = require("html-minifier-terser");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const { EleventyRenderPlugin } = require("@11ty/eleventy");
+const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.setNunjucksEnvironmentOptions({
+    throwOnUndefined: true,
+    useContext: true,
+  });
+
   // Add navigation plugin
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin);
 
   if (process.env.ELEVENTY_PRODUCTION) {
     eleventyConfig.addTransform("htmlmin", htmlminTransform);
@@ -14,13 +21,14 @@ module.exports = function (eleventyConfig) {
 
   // Passthrough
   eleventyConfig.addPassthroughCopy({ "src/static": "." });
+  eleventyConfig.addPassthroughCopy({ "src/media": "media" });
 
   // Watch targets
   eleventyConfig.addWatchTarget("./src/styles/");
 
   // Collections
   eleventyConfig.addCollection("compositions", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/composition/*.md");
+    return collectionApi.getFilteredByGlob("src/compositions/*.html");
   });
   eleventyConfig.addCollection("spectacles", function (collectionApi) {
     return collectionApi.getFilteredByGlob("src/spectacles/*.md");

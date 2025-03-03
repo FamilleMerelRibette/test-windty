@@ -1,6 +1,7 @@
 ---
 title: Mon Premier Spectacle
 draft: true
+modele: premier
 ---
 
 # Mon Premier Spectacle
