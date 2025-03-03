@@ -8,7 +8,9 @@
 
     {%- for composition in collections.compositions -%}
     <div>
-    {{ composition.data.title }}
+
+        {{ composition.content | safe }}
+
     </div>
     {%- endfor -%}
 
