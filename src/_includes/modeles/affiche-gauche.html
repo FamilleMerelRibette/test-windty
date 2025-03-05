@@ -10,7 +10,8 @@
         <div>
             <h3 class="text-4xl font-bold mb-2">{{ titre }}</h3>
             <h4 class="text-xl mb-12">{{ type }}</h4>
-            <p class="text-justify">{{ texte | nl2br | safe }}</p>
+            <p class="text-justify mb-10">{{ texte | nl2br | safe }}</p>
+            <p>{{ interpretes | nl2br | safe }}</p>
         </div>
         <div class="flex-grow flex items-center justify-center">
             <button
@@ -33,15 +34,7 @@
         </h3>
         <div class="flex justify-center">
             <div class="w-4/5 relative" style="padding-bottom: 45%">
-                <iframe
-                    class="absolute top-0 left-0 w-full h-full rounded-lg"
-                    src="{{ video }}"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                >
-                </iframe>
+                {{ youtube }}
             </div>
         </div>
     </div>
@@ -57,11 +50,12 @@
         <div class="flex justify-center">
             <div class="w-4/5">
                 <iframe
-                    class="w-full rounded-lg"
-                    height="166"
-                    src="{{ soundcloud }}"
-                    frameborder="0"
+                    width="100%"
+                    height="450"
+                    scrolling="no"
+                    frameborder="no"
                     allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url={{ soundcloud }}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
                 ></iframe>
             </div>
         </div>
