@@ -2,17 +2,22 @@
     <div>
         <img
             src="{{ affiche }}"
-            alt="affiche de {{ title }}"
+            alt="affiche de {{ titre }}"
             class="w-3/5 object-cover rounded-lg shadow-lg mx-auto block"
         />
     </div>
     <div class="prose max-w-none flex flex-col min-h-full">
         <div>
-            <h3 class="text-2xl font-bold mb-12">{{ accroche }}</h3>
+            <h3 class="text-4xl font-bold mb-2">{{ titre }}</h3>
+            <h4 class="text-xl mb-12">{{ type }}</h4>
             <p class="text-justify">{{ texte | nl2br | safe }}</p>
         </div>
         <div class="flex-grow flex items-center justify-center">
-            <button class="bg-gray-800 text-white px-8 py-3 rounded-lg hover:bg-gray-700 transition-colors duration-300">Agenda</button>
+            <button
+                class="bg-gray-800 text-white px-8 py-3 rounded-lg hover:bg-gray-700 transition-colors duration-300"
+            >
+                Agenda
+            </button>
         </div>
     </div>
 </div>
