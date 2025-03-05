@@ -12,6 +12,9 @@
             <h4 class="text-xl mb-12">{{ type }}</h4>
             <p class="text-justify mb-10">{{ texte | nl2br | safe }}</p>
             <p>{{ interpretes | nl2br | safe }}</p>
+            <p class="mt-8">
+                <span class="font-bold">contact</span>: {{ contact }}
+            </p>
         </div>
         <div class="flex-grow flex items-center justify-center">
             <button
@@ -24,13 +27,12 @@
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-20">
     <div>
-        <h3 class="text-2xl font-bold mb-10 flex items-center gap-4">
+        <h3 class="text-3xl font-bold mb-10 flex items-center gap-4">
             En
+            <span class="font-bold uppercase">images</span>
             <span
-                class="font-bold bg-gradient-to-r from-sky-500 via-pink-500 to-yellow-500 text-transparent bg-clip-text"
-                >images</span
-            >
-            <span class="h-[2px] bg-gray-300 flex-grow mt-2"></span>
+                class="h-[3px] bg-gradient-to-r from-sky-500 via-pink-500 to-yellow-500 flex-grow mt-2"
+            ></span>
         </h3>
         <div class="flex justify-center">
             <div class="w-4/5 relative" style="padding-bottom: 45%">
@@ -48,13 +50,11 @@
         </div>
     </div>
     <div>
-        <h3 class="text-2xl font-bold mb-10 flex items-center gap-4">
-            En
+        <h3 class="text-3xl font-bold mb-10 flex items-center gap-4">
+            En<span class="font-bold uppercase">musique</span>
             <span
-                class="font-bold bg-gradient-to-r from-sky-500 via-pink-500 to-yellow-500 text-transparent bg-clip-text"
-                >musique</span
-            >
-            <span class="h-[2px] bg-gray-300 flex-grow mt-2"></span>
+                class="h-[3px] bg-gray-300 flex-grow bg-gradient-to-r from-sky-500 via-pink-500 to-yellow-500"
+            ></span>
         </h3>
         <div class="flex justify-center">
             <div class="w-4/5">
