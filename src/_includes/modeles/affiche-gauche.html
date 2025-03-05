@@ -6,10 +6,12 @@
             class="w-3/5 object-cover rounded-lg shadow-lg mx-auto block"
         />
     </div>
-    <div class="prose max-w-none">
-        <h3 class="text-2xl font-bold mb-12">{{ accroche }}</h3>
-        <p class="text-justify">{{ texte | nl2br | safe }}</p>
-        <div class="flex justify-center mt-8">
+    <div class="prose max-w-none flex flex-col min-h-full">
+        <div>
+            <h3 class="text-2xl font-bold mb-12">{{ accroche }}</h3>
+            <p class="text-justify">{{ texte | nl2br | safe }}</p>
+        </div>
+        <div class="flex-grow flex items-center justify-center">
             <button class="bg-gray-800 text-white px-8 py-3 rounded-lg hover:bg-gray-700 transition-colors duration-300">Agenda</button>
         </div>
     </div>
