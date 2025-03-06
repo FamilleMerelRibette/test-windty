@@ -9,7 +9,9 @@
     <div class="prose max-w-none flex flex-col min-h-full">
         <div>
             <h3 class="md:text-4xl text-3xl font-bold mb-2">{{ titre }}</h3>
+            {%- if type -%}
             <h4 class="text-xl mb-12">{{ type }}</h4>
+            {%- endif -%}
             <p class="text-justify mb-10">{{ texte | nl2br | safe }}</p>
             <p>{{ interpretes | nl2br | safe }}</p>
             <p class="mt-8">
