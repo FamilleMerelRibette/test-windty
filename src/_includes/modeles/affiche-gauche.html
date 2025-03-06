@@ -19,10 +19,28 @@
         </div>
         <div class="flex-grow flex items-center mt-5">
             <button
+                onclick="document.getElementById('agendaModal').classList.remove('hidden')"
                 class="bg-gray-800 text-white px-8 py-3 rounded-lg hover:bg-gray-700 transition-colors duration-300"
             >
                 Agenda
             </button>
+            
+            <!-- Modal -->
+            <div id="agendaModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
+                <div class="bg-white w-[70%] h-[70%] rounded-lg p-8 relative">
+                    <button 
+                        onclick="document.getElementById('agendaModal').classList.add('hidden')"
+                        class="absolute top-4 right-4 text-gray-600 hover:text-gray-800"
+                    >
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                    <h2 class="text-2xl font-bold mb-4">Agenda</h2>
+                    <div class="overflow-auto h-[calc(100%-4rem)]">
+                        <!-- Contenu de l'agenda ici -->
+                        <p>Contenu de l'agenda à venir...</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
