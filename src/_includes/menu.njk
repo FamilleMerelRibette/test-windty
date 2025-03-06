@@ -10,8 +10,8 @@ set menu = [
 
 <nav class="bg-white/80 backdrop-blur-sm fixed w-full z-50">
   <div class="max-w-7xl mx-auto">
-    <div class="flex justify-between items-center h-16">
-      <div class="flex items-center place-items-start justify-start w-full ml-5">
+    <div class="flex items-center h-16">
+      <div class="place-items-start justify-start ml-5">
         <!-- Logo -->
         <a href="{{ page.url + "#accueil" }}" class="h-12 block">
           <img src="/static/logo-asteria-noir.png" alt="Logo Asteria" class="h-full object-contain">
@@ -30,7 +30,7 @@ set menu = [
       <div class="hidden md:flex space-x-8">
         {%- for entry in menu %}
         <a href="{{ entry.slug | url }}"
-           class="py-4 px-20 text-gray-500 font-semibold hover:text-gray-900 transition duration-300 uppercase tracking-wider{% if entry.url == page.url %} text-gray-900 border-b-2 border-gray-900{% endif %}">
+           class="py-4 px-4 text-gray-500 font-semibold hover:text-gray-900 transition duration-300 uppercase tracking-wider{% if entry.url == page.url %} text-gray-900 border-b-2 border-gray-900{% endif %}">
           {{ entry.titre }}
         </a>
         {%- endfor %}
