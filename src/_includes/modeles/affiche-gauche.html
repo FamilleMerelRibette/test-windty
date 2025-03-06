@@ -22,7 +22,7 @@
         <div class="flex-grow flex items-center mt-5">
             {%- if agenda -%}
             <button
-                onclick="document.getElementById('agendaModal').classList.remove('hidden')"
+                onclick="document.getElementById('agendaModal-{{slug}}').classList.remove('hidden')"
                 class="bg-gray-800 text-white px-8 py-3 rounded-lg hover:bg-gray-700 transition-colors duration-300"
             >
                 Agenda
@@ -39,13 +39,14 @@
             {%- endif -%}
 
             <!-- Modal -->
+            {%- if agenda -%}
             <div
-                id="agendaModal"
+                id="agendaModal-{{slug}}"
                 class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center"
             >
                 <div class="bg-white w-[50%] h-[50%] rounded-lg p-8 relative">
                     <button
-                        onclick="document.getElementById('agendaModal').classList.add('hidden')"
+                        onclick="document.getElementById('agendaModal-{{slug}}').classList.add('hidden')"
                         class="absolute top-4 right-4 text-gray-600 hover:text-gray-800"
                     >
                         <i class="fas fa-times text-xl"></i>
@@ -66,6 +67,7 @@
                     </div>
                 </div>
             </div>
+            {%- endif -%}
         </div>
     </div>
 </div>
@@ -78,6 +80,7 @@
                 class="h-[3px] bg-gradient-to-r from-sky-500 via-pink-500 to-yellow-500 flex-grow mt-2"
             ></span>
         </h3>
+        {%- if youtube -%}
         <div class="flex justify-center">
             <div class="w-4/5 relative" style="padding-bottom: 45%">
                 <iframe
@@ -92,6 +95,7 @@
                 ></iframe>
             </div>
         </div>
+        {%- endif -%}
     </div>
     <div>
         <h3 class="text-3xl font-bold mb-10 flex items-center gap-4">
@@ -100,6 +104,7 @@
                 class="h-[3px] bg-gray-300 flex-grow bg-gradient-to-r from-sky-500 via-pink-500 to-yellow-500"
             ></span>
         </h3>
+        {%- if soundcloud -%}
         <div class="flex justify-center">
             <div class="w-4/5">
                 <iframe
@@ -112,5 +117,6 @@
                 ></iframe>
             </div>
         </div>
+        {%- endif -%}
     </div>
 </div>

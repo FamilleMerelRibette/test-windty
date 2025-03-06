@@ -4,6 +4,7 @@ const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const { EleventyRenderPlugin } = require("@11ty/eleventy");
 const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
 const embedEverything = require("eleventy-plugin-embed-everything");
+const { DateTime } = require("luxon");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.setNunjucksEnvironmentOptions({
@@ -17,6 +18,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyImageTransformPlugin);
   eleventyConfig.addPlugin(embedEverything, {
     use: ["soundcloud", "youtube"],
+  });
+
+  eleventyConfig.addFilter("date", function (date, format) {
+    if (date == null) date = DateTime.now();
+    else date = new Date(date);
+    return date.toFormat(format);
   });
 
   if (process.env.ELEVENTY_PRODUCTION) {
