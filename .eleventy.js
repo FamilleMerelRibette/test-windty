@@ -3,6 +3,7 @@ const htmlmin = require("html-minifier-terser");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const { EleventyRenderPlugin } = require("@11ty/eleventy");
 const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
+const embedEverything = require("eleventy-plugin-embed-everything");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.setNunjucksEnvironmentOptions({
@@ -14,6 +15,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(eleventyImageTransformPlugin);
+  eleventyConfig.addPlugin(embedEverything, {
+    use: ["soundcloud", "youtube"],
+  });
 
   if (process.env.ELEVENTY_PRODUCTION) {
     eleventyConfig.addTransform("htmlmin", htmlminTransform);
@@ -31,10 +35,10 @@ module.exports = function (eleventyConfig) {
     return collectionApi.getFilteredByGlob("src/compositions/*.html");
   });
   eleventyConfig.addCollection("spectacles", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/spectacles/*.md");
+    return collectionApi.getFilteredByGlob("src/spectacles/*.html");
   });
   eleventyConfig.addCollection("concerts", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/concerts/*.md");
+    return collectionApi.getFilteredByGlob("src/concerts/*.html");
   });
 
   var pathPrefix = "";

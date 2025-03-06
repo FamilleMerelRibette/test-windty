@@ -1,14 +1,14 @@
-<section id="concert" class="min-h-screen pt-48">
+<section id="concert" class="min-h-screen pt-20">
     <div class="container mx-auto px-6">
-        <h2 class="text-5xl font-bold mb-8">Concert</h2>
-        <p class="text-xl text-gray-600">
+        <h2 class="text-5xl font-bold mb-2 font-['Squada_One'] uppercase">Concert</h2>
+        <p class="text-xl text-gray-600 mb-12">
             Vivez l'émotion de la musique live dans nos concerts exceptionnels.
         </p>
     </div>
 
     {%- for concert in collections.concerts -%}
-    <div class="container mx-auto px-6">
-    {{ concert.data.title }}
+    <div class="container mx-auto px-6 py-6">
+        {{ concert.content | safe }}
     </div>
     {%- endfor -%}
 </section>

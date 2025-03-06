@@ -9,8 +9,8 @@ set menu = [
 %}
 
 <nav class="bg-white/80 backdrop-blur-sm fixed w-full z-50">
-  <div class="max-w-7xl mx-auto">
-    <div class="flex items-center justify-between h-16">
+  <div class="max-w-7xl mx-auto flex flex-row">
+    <div class="flex items-center h-16">
       <div class="flex shrink items-center ml-5">
         <!-- Logo -->
         <a href="{{ page.url + "#accueil" }}" class="h-12">
@@ -28,7 +28,7 @@ set menu = [
       </div>
 
       <!-- Menu desktop -->
-      <div class="hidden md:flex space-x-8 md:grow justify-end">
+      <div class="hidden md:flex md:grow space-x-8 justify-end mr-5">
         {%- for entry in menu %}
         <a href="{{ entry.slug | url }}"
            class="py-4 px-4 text-gray-500 font-semibold hover:text-gray-900 transition duration-300 uppercase tracking-wider{% if entry.url == page.url %} text-gray-900 border-b-2 border-gray-900{% endif %}">
