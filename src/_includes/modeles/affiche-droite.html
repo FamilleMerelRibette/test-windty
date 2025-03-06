@@ -1,0 +1,13 @@
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+    <div class="prose max-w-none">
+        <h3 class="text-lg">{{ accroche }}</h3>
+        <p>{{ texte | nl2br | safe }}</p>
+    </div>
+    <div class="aspect-auto">
+        <img
+            src="{{ affiche }}"
+            alt="affiche de {{ title }}"
+            class="w-full h-full object-cover rounded-lg shadow-lg"
+        />
+    </div>
+</div>
