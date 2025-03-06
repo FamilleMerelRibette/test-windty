@@ -57,13 +57,25 @@ set menu = [
 
 <script>
   document.getElementById('menu-toggle').addEventListener('click', function() {
+    toggleMenu();
+  });
+
+  // Ajouter des écouteurs d'événements pour tous les liens du menu mobile
+  document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', function() {
+      toggleMenu();
+    });
+  });
+
+  function toggleMenu() {
     const mobileMenu = document.getElementById('mobile-menu');
     const mainContent = document.getElementById('main-content');
     const menuOpen = document.querySelector('.menu-open');
     const menuClose = document.querySelector('.menu-close');
-    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+    const menuToggle = document.getElementById('menu-toggle');
+    const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
 
-    this.setAttribute('aria-expanded', !isExpanded);
+    menuToggle.setAttribute('aria-expanded', !isExpanded);
     mobileMenu.classList.toggle('hidden');
     menuOpen.classList.toggle('hidden');
     menuClose.classList.toggle('hidden');
@@ -74,5 +86,5 @@ set menu = [
     } else {
       mainContent.style.opacity = '1';
     }
-  });
+  }
 </script>
