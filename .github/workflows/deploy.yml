@@ -106,15 +106,14 @@ jobs:
           mkdir -p ./site
           tar -xf ./site-build/artifact.tar -C ./site
 
-      - name: Install SSH key
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -p ${{ secrets.SSH_PORT || 22 }} ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
-
-      - name: Deploy to OVH via rsync
-        run: |
-          rsync -avz --delete -e "ssh -p ${{ secrets.SSH_PORT || 22 }}" \
-            ./site/ \
-            ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:${{ secrets.REMOTE_DIR }}
+      - name: Deploy to OVH via SSH
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          port: ${{ secrets.SSH_PORT || 22 }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: "./site/"
+          target: ${{ secrets.REMOTE_DIR }}
+          strip_components: 1
+          rm: true
