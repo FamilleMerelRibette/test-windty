@@ -79,7 +79,7 @@ jobs:
           local-dir: ./_site/
           server-dir: /asteria-production/
           dangerous-clean-slate: true
-          log-level: verbose
+          log-level: standard
 
       # - name: Upload artifact
       #   uses: actions/upload-pages-artifact@v3
