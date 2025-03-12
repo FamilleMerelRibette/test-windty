@@ -48,6 +48,12 @@ module.exports = function (eleventyConfig) {
     return collectionApi.getFilteredByGlob("src/concerts/*.html");
   });
 
+  eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
+    if (data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
+      return false;
+    }
+  });
+
   var pathPrefix = "";
   // if (process.env.GITHUB_REPOSITORY) {
   //   pathPrefix = process.env.GITHUB_REPOSITORY.split("/")[1];
