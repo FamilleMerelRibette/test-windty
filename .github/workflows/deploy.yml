@@ -77,7 +77,7 @@ jobs:
           port: 21
           protocol: ftp
           local-dir: ./_site/
-          server-dir: /home/otakeh/asteria-production/
+          server-dir: /asteria-production/
           dangerous-clean-slate: true
           log-level: verbose
 
