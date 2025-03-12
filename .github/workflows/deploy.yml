@@ -79,6 +79,7 @@ jobs:
           local-dir: ./_site/
           server-dir: /home/otakeh/asteria-production/
           dangerous-clean-slate: true
+          log-level: verbose
 
       # - name: Upload artifact
       #   uses: actions/upload-pages-artifact@v3
