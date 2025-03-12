@@ -49,9 +49,9 @@ module.exports = function (eleventyConfig) {
   });
 
   var pathPrefix = "";
-  if (process.env.GITHUB_REPOSITORY) {
-    pathPrefix = process.env.GITHUB_REPOSITORY.split("/")[1];
-  }
+  // if (process.env.GITHUB_REPOSITORY) {
+  //   pathPrefix = process.env.GITHUB_REPOSITORY.split("/")[1];
+  // }
 
   return {
     dir: {
