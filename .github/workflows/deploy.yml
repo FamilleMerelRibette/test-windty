@@ -67,7 +67,7 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build
-        run: ${{ steps.detect-package-manager.outputs.manager }} run build
+        run: ${{ steps.detect-package-manager.outputs.manager }} run build --pathprefix=/
       - name: Deploy to OVH via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
