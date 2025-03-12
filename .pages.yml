@@ -1,18 +1,5 @@
 media: src/media
 content:
-  - name: posts
-    label: Posts
-    type: collection
-    path: content/blog
-    view:
-      fields: [title, draft, date]
-    fields:
-      - { name: title, label: Title, type: string, required: true }
-      - { name: description, label: Description, type: string }
-      - { name: date, label: Date, type: date }
-      - { name: draft, label: Draft, type: boolean }
-      - { name: tags, label: Tags, type: string, list: true }
-      - { name: body, label: Body, type: rich-text }
   - name: spectacles
     label: Spectacles
     type: collection
