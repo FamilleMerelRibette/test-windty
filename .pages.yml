@@ -22,11 +22,11 @@ content:
         description: "Liste des interprètes du spectacle"
       - name: agenda
         label: Agenda
-        type: list
+        type: text
         description: "Dates et lieux des représentations"
-        fields:
-          - { name: date, label: Date, type: string }
-          - { name: lieu, label: Lieu, type: string }
+        # fields:
+        #   - { name: date, label: Date, type: string }
+        #   - { name: lieu, label: Lieu, type: string }
       - name: affiche
         label: Affiche
         type: image
@@ -35,12 +35,10 @@ content:
           output: media
           path: src/media
           categories: [image]
-      - {
-          name: youtube,
-          label: YouTube,
-          type: string,
-          description: "Lien d'intégration YouTube",
-        }
+      - name: youtube
+        label: YouTube
+        type: string
+        description: "Lien d'intégration YouTube"
       - {
           name: soundcloud,
           label: SoundCloud,
@@ -57,12 +55,13 @@ content:
         label: Modèle
         type: select
         options:
-          - label: affiche-gauche
-            value: |
-              {% extends "modeles/affiche-gauche.html" %}
-          - label: affiche-droite
-            value: |
-              {% extends "modeles/affiche-droite.html" %}
+          values:
+            - label: affiche-gauche
+              value: |
+                {% extends "modeles/affiche-gauche.html" %}
+            - label: affiche-droite
+              value: |
+                {% extends "modeles/affiche-droite.html" %}
   - name: metadata
     label: Metadata
     type: file
