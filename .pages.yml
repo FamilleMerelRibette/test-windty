@@ -22,7 +22,7 @@ content:
         description: "Liste des interprètes du spectacle"
       - name: agenda
         label: Agenda
-        type: text
+        type: code
         description: "Dates et lieux des représentations"
         # fields:
         #   - { name: date, label: Date, type: string }
@@ -39,27 +39,23 @@ content:
         label: YouTube
         type: string
         description: "Lien d'intégration YouTube"
-      - {
-          name: soundcloud,
-          label: SoundCloud,
-          type: string,
-          description: "Lien d'intégration SoundCloud",
-        }
-      - {
-          name: contact,
-          label: Contact,
-          type: string,
-          description: "Email ou téléphone de contact",
-        }
+      - name: soundcloud
+        label: SoundCloud
+        type: string
+        description: "Lien d'intégration SoundCloud"
+      - name: contact
+        label: Contact
+        type: string
+        description: "Email ou téléphone de contact"
       - name: body
         label: Modèle
         type: select
         options:
           values:
-            - label: affiche-gauche
+            - label: affiche à gauche
               value: |
                 {% extends "modeles/affiche-gauche.html" %}
-            - label: affiche-droite
+            - label: un autre modèle
               value: |
                 {% extends "modeles/affiche-droite.html" %}
   - name: metadata
