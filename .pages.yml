@@ -34,11 +34,30 @@ content:
           input: src/media
           output: media
           path: src/media
-          categories: [ image ]
-      - { name: youtube, label: YouTube, type: string, description: "Lien d'intégration YouTube" }
-      - { name: soundcloud, label: SoundCloud, type: string, description: "Lien d'intégration SoundCloud" }
-      - { name: contact, label: Contact, type: string, description: "Email ou téléphone de contact" }
-      - { name: body, label: Contenu, type: rich-text }
+          categories: [image]
+      - {
+          name: youtube,
+          label: YouTube,
+          type: string,
+          description: "Lien d'intégration YouTube",
+        }
+      - {
+          name: soundcloud,
+          label: SoundCloud,
+          type: string,
+          description: "Lien d'intégration SoundCloud",
+        }
+      - {
+          name: contact,
+          label: Contact,
+          type: string,
+          description: "Email ou téléphone de contact",
+        }
+      - name: body
+        label: Contenu
+        type: rich-text
+        default: |
+          {% extends "modeles/affiche-gauche.html" %}
   - name: metadata
     label: Metadata
     type: file
