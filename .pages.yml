@@ -54,10 +54,15 @@ content:
           description: "Email ou téléphone de contact",
         }
       - name: body
-        label: Contenu
-        type: rich-text
-        default: |
-          {% extends "modeles/affiche-gauche.html" %}
+        label: Modèle
+        type: select
+        options:
+          - label: affiche-gauche
+            value: |
+              {% extends "modeles/affiche-gauche.html" %}
+          - label: affiche-droite
+            value: |
+              {% extends "modeles/affiche-droite.html" %}
   - name: metadata
     label: Metadata
     type: file
