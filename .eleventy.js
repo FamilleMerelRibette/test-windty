@@ -39,13 +39,13 @@ module.exports = function (eleventyConfig) {
 
   // Collections
   eleventyConfig.addCollection("compositions", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/compositions/*.html");
+    return collectionApi.getFilteredByGlob("src/compositions/*.md");
   });
   eleventyConfig.addCollection("spectacles", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/spectacles/*.html");
+    return collectionApi.getFilteredByGlob("src/spectacles/*.md");
   });
   eleventyConfig.addCollection("concerts", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/concerts/*.html");
+    return collectionApi.getFilteredByGlob("src/concerts/*.md");
   });
 
   eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
