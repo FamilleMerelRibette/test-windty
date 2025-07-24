@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- https://github.com/joshbuchea/HEAD -->
+
+    <!-- Recommended -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Meta -->
+    <meta name="description" content="{{ metadata.description }}" />
+    <meta name="generator" content="{{ eleventy.generator }}" />
+
+    <!-- Icons -->
+    <!-- https://favicon.io/ -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{{ '/apple-touch-icon.png' | url }}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{{ '/favicon-32x32.png' | url }}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{{ '/favicon-16x16.png' | url }}"
+    />
+    <link rel="manifest" href="{{ '/site.webmanifest' | url }}" />
+
+    <title>{{ title or metadata.title }}</title>
+
+    <link rel="stylesheet" href="{{ '/site.css' | url }}" />
+    <link rel="stylesheet" href="/@fontsource/rubik/400.css" />
+    <link rel="stylesheet" href="/@fontsource/rubik/500.css" />
+    <link rel="stylesheet" href="/@fontsource/rubik/600.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  </head>
+
+  <body class="font-sans leading-normal tracking-normal text-gray-900">
+
+<main class="container flex flex-col flex-wrap items-center px-6 pt-24 mx-auto md:flex-row md:pt-48">
+  <header class="flex flex-col justify-center w-full overflow-y-hidden lg:items-start xl:w-2/5">
+    <h1 class="my-4 text-3xl font-bold leading-tight text-center text-blue-500 md:text-left md:text-5xl">
+        <span class="sr-only">Bientôt disponible</span>
+    </h1>
+    <p class="mb-6 text-base leading-normal text-center md:text-left md:text-2xl">Extrait audio disponible à partir du 10 aout 2025.</p>
+    <a rel="noopener noreferrer" href="{{ '/' | url }}" class="px-8 py-3 font-semibold text-white bg-blue-500 rounded">Retour à l'accueil</a>
+  </header>
+</main>
+
+{% include "footer.njk" %}
+
+</body>
+</html>
