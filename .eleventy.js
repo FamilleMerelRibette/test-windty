@@ -33,6 +33,10 @@ module.exports = function (eleventyConfig) {
   // Passthrough
   eleventyConfig.addPassthroughCopy({ "src/static": "." });
   eleventyConfig.addPassthroughCopy({ "src/media": "media" });
+  eleventyConfig.addPassthroughCopy({
+    "./node_modules/@fontsource/rubik/*.css": "@fontsource/rubik",
+    "./node_modules/@fontsource/rubik/files/*.woff2": "@fontsource/rubik/files",
+  });
 
   // Watch targets
   eleventyConfig.addWatchTarget("./src/styles/");
