@@ -5,16 +5,26 @@ draft: false
 affiche: media/msm.jpg
 youtube: https://www.youtube.com/embed/IEgHJbD8ymE?si=FceYHIXp4NZa7AWS
 soundcloud: https://api.soundcloud.com/playlists/1530807106
-type: concert théatralisé - standard des années 30 à 60
+type: concert théatralisé - standard des années 70
 contact: sonia.ribette@gmail.com
 formation: |
     Solo: chant sur bande son
-    Duo: piano & voix
+    Duo: Guitare & voix
 interpretes: |
-    Laurent Dupart au clavier
+    Yann Ravet à la guitare
     Sonia ribette au chant
 agenda:
-    - date: 24/02/25
+    - date: 13/12/25
+      lieu: Parempuyre (33)
+    - date: 05/11/25
+      lieu: Fargues saint Hilaire (33)
+    - date: 23/10/25
+      lieu: Izon (33)
+    - date: 19/08/25
+      lieu: Bordeaux (33)
+    - date: 12/08/25
+      lieu: Mérignac (33)
+    - date: 24/03/25
       lieu: Saint Macaire (33)
     - date: 27/12/24
       lieu: Ambès (33)
@@ -49,11 +59,13 @@ agenda:
     - date: 23/02/24
       lieu: Villenave d'Ornon (33)
 texte: |
-    Un spectacle inoubliable où la musique et le théâtre se rencontrent pour vous faire revivre les grands classiques de la chanson française.
-    Rose vous embarquera dans une aventure musicale unique. Vous serez les chefs d’orchestre et choisirez les chansons qu’elle interprétera au fur et à mesure, créant ainsi un spectacle personnalisé.
-    Grâce à votre aide, elle découvrira enfin la chanson parfaite pour le mariage de sa sœur.
+    Un spectacle inoubliable où la musique et le théâtre se rencontrent pour vous faire revivre les grands classiques des années 70.
+    De Bob Dylan à Stevie Wonder, de Pink Floyd à Bob Marley, des Beatles à Otis Redding, en passant par quelques perles de la chanson française, nous explorerons ensemble des morceaux qui ont traversé les époques et les cœurs. 
+    Des titres que nous réinterpreterons pour vous avec simplicité et justesse, dans une atmosphère chaleureuse, acoustique, toujours vivante.
+    Rose et Yann vous embarquerons dans une aventure musicale unique. Vous serez les chefs d’orchestre et choisirez les chansons qu’ils interpréterons au fur et à mesure, créant ainsi un spectacle personnalisé et unique.
+    Grâce à votre aide, Rose découvrira enfin la chanson parfaite pour le mariage de sa sœur.
     Préparez-vous à chanter, rire et être émus. “Ma Sœur se Marie” est bien plus qu’un concert, c’est une expérience interactive et mémorable à ne pas manquer !
-    Ce spectacle s'adapte à votre budget et vos envies. Il peut aussi être joué en mode juke-box, en solo ou duo.
+    Ce spectacle s'adapte à votre budget et vos envies. Il peut aussi être joué en mode juke-box, et en solo.
 ---
 
 {% extends "modeles/affiche-gauche.html" %}
