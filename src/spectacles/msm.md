@@ -2,7 +2,7 @@
 titre: Ma Sœur se Marie !
 slug: msm
 draft: false
-affiche: media/msm.jpg
+affiche: media/msm-2025.jpg
 youtube: https://www.youtube.com/embed/IEgHJbD8ymE?si=FceYHIXp4NZa7AWS
 soundcloud: https://soundcloud.com/soniaribette/teaser-sonia-yann-2025-mp3 
 _soundcloud: https://api.soundcloud.com/playlists/1530807106
