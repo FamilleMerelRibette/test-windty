@@ -4,7 +4,8 @@ slug: msm
 draft: false
 affiche: media/msm.jpg
 youtube: https://www.youtube.com/embed/IEgHJbD8ymE?si=FceYHIXp4NZa7AWS
-soundcloud: https://api.soundcloud.com/playlists/1530807106
+soundcloud: https://on.soundcloud.com/gb11WwIOa1Ce6hGTKg 
+_soundcloud: https://api.soundcloud.com/playlists/1530807106
 type: concert théatralisé - standard des années 70
 contact: sonia.ribette@gmail.com
 formation: |
