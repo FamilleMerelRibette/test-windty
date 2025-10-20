@@ -6,7 +6,7 @@ affiche: media/msm.jpg
 youtube: https://www.youtube.com/embed/IEgHJbD8ymE?si=FceYHIXp4NZa7AWS
 soundcloud: https://soundcloud.com/soniaribette/teaser-sonia-yann-2025-mp3 
 _soundcloud: https://api.soundcloud.com/playlists/1530807106
-type: concert théatralisé - standard des années 70
+type: concert théâtralisé - standard des années 70
 contact: sonia.ribette@gmail.com
 formation: |
     Solo: chant sur bande son
@@ -62,8 +62,8 @@ agenda:
 texte: |
     Un spectacle inoubliable où la musique et le théâtre se rencontrent pour vous faire revivre les grands classiques des années 70.
     De Bob Dylan à Stevie Wonder, de Pink Floyd à Bob Marley, des Beatles à Otis Redding, en passant par quelques perles de la chanson française, nous explorerons ensemble des morceaux qui ont traversé les époques et les cœurs. 
-    Des titres que nous réinterpreterons pour vous avec simplicité et justesse, dans une atmosphère chaleureuse, acoustique, toujours vivante.
-    Rose et Yann vous embarquerons dans une aventure musicale unique. Vous serez les chefs d’orchestre et choisirez les chansons qu’ils interpréterons au fur et à mesure, créant ainsi un spectacle personnalisé et unique.
+    Des titres que nous ré-interpréterons pour vous avec simplicité et justesse, dans une atmosphère chaleureuse, acoustique, toujours vivante.
+    Rose et Yann vous embarquerons dans une aventure musicale unique. Vous serez les chefs d’orchestre et choisirez les chansons qu’ils interpréteront au fur et à mesure, créant ainsi un spectacle personnalisé et unique.
     Grâce à votre aide, Rose découvrira enfin la chanson parfaite pour le mariage de sa sœur.
     Préparez-vous à chanter, rire et être émus. “Ma Sœur se Marie” est bien plus qu’un concert, c’est une expérience interactive et mémorable à ne pas manquer !
     Ce spectacle s'adapte à votre budget et vos envies. Il peut aussi être joué en mode juke-box, et en solo.
