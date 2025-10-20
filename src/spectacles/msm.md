@@ -9,8 +9,8 @@ _soundcloud: https://api.soundcloud.com/playlists/1530807106
 type: concert théâtralisé - standard des années 70
 contact: sonia.ribette@gmail.com
 formation: |
-    Solo: chant sur bande son
     Duo: Guitare & voix
+    Solo: chant sur bande son
 interpretes: |
     Yann Ravet à la guitare
     Sonia ribette au chant
