@@ -78,7 +78,7 @@ jobs:
           protocol: ftp
           local-dir: ./_site/
           server-dir: /asteria-production/
-          dangerous-clean-slate: true
+          dangerous-clean-slate: false
           log-level: standard
 
       # - name: Upload artifact
