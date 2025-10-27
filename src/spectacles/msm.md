@@ -4,14 +4,13 @@ slug: msm
 draft: false
 affiche: media/msm-2025.jpg
 youtube: https://www.youtube.com/embed/IEgHJbD8ymE?si=FceYHIXp4NZa7AWS
-soundcloud: https://soundcloud.com/soniaribette/teaser-sonia-yann-2025-mp3 
-_soundcloud: https://api.soundcloud.com/playlists/1530807106
-type: concert théâtralisé - standard des années 70
+soundcloud: https://api.soundcloud.com/playlists/2104350571
+type: concert théâtralisé - solo bande son
+repertoire: chanson française des années 30-50
 contact: sonia.ribette@gmail.com
 formation: |
-    Duo: Guitare & voix
+    Solo sur bande son
 interpretes: |
-    Yann Ravet à la guitare
     Sonia ribette au chant
 agenda:
     - date: 13/12/25
@@ -59,13 +58,22 @@ agenda:
     - date: 23/02/24
       lieu: Villenave d'Ornon (33)
 texte: |
-    Un spectacle inoubliable où la musique et le théâtre se rencontrent pour vous faire revivre les grands classiques des années 70.
-    De Bob Dylan à Stevie Wonder, de Pink Floyd à Bob Marley, des Beatles à Otis Redding, en passant par quelques perles de la chanson française, nous explorerons ensemble des morceaux qui ont traversé les époques et les cœurs. 
-    Des titres que nous ré-interpréterons pour vous avec simplicité et justesse, dans une atmosphère chaleureuse, acoustique, toujours vivante.
-    Rose et Yann vous embarqueront dans une aventure musicale unique. Vous serez les chefs d’orchestre et choisirez les chansons qu’ils interpréteront au fur et à mesure, créant ainsi un spectacle personnalisé et unique.
-    Grâce à votre aide, Rose découvrira enfin la chanson parfaite pour le mariage de sa sœur.
-    Préparez-vous à chanter, rire et être émus. “Ma Sœur se Marie” est bien plus qu’un concert, c’est une expérience interactive et mémorable à ne pas manquer !
-    Ce spectacle s'adapte à votre budget et vos envies. Il peut aussi être joué en mode juke-box, et en solo.
+    Rose a un défi de taille : sa soeur se marie demain, et elle n’a toujours pas trouvé la chanson
+    parfaite pour célébrer ce grand jour ! Heureusement, elle peut compter sur vous, le public, pour
+    l’aider !
+    Dans ce concert théâtralisé plein d’humour et d’émotion, Rose interprète les plus grands
+    classiques de la chanson française… mais ce sont les spectateurs qui choisissent les titres,
+    parmi un répertoire d’une cinquantaine de chansons. Chaque représentation devient alors un
+    spectacle sur mesure, unique et surprenant, où la musique se construit en direct.
+    Chanter, danser, rire, s’émouvoir : «Ma Soeur se Marie» est une expérience vivante et
+    participative, où nos aînés deviennent de véritables partenaires de scène. Quelques-uns auront
+    même la chance de jouer un petit rôle !
+    Un décor épuré, des accessoires malicieux, une interprète pétillante… et surtout, un public mis
+    à l’honneur dans ce voyage musical tendre et joyeux.
+    À la fin, ensemble, vous trouverez la chanson idéale pour le mariage…
+    «Ma Soeur se Marie», ce n’est pas qu’un concert : c’est un moment de partage inoubliable. À ne
+    surtout pas manquer !
+    Avec Rose, la musique prend vie… et les souvenirs aussi.
 ---
 
 {% extends "modeles/affiche-gauche.html" %}
