@@ -5,8 +5,8 @@ draft: false
 affiche: media/msm-2025.jpg
 youtube: https://www.youtube.com/embed/IEgHJbD8ymE?si=FceYHIXp4NZa7AWS
 soundcloud: https://api.soundcloud.com/playlists/2104350571
-type: concert théâtralisé - solo bande son
-repertoire: chanson française des années 30-50
+type: concert théâtralisé - solo sur bande son
+repertoire: Chanson française des années 30 à 50
 contact: sonia.ribette@gmail.com
 formation: |
     Solo sur bande son
