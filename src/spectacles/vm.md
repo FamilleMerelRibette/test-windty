@@ -7,7 +7,7 @@ youtube: https://www.youtube.com/embed/uQbGC4HQAW4?si=SOPUiuyQFKzyXOdJ
 soundcloud: https://api.soundcloud.com/playlists/2037924360
 type: concert sensoriel
 # repertoire: Chanson française des années 30 à 50
-contact: sonia.ribette@gmail.com
+contact: le.voyage.musical@gmail.com
 # formation: |
 #   Piano
 interpretes: |
