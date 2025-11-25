@@ -16,16 +16,16 @@
             <h4 class="text-xl mb-2">{{ type }}</h4>
             {%- endif -%} {%- if repertoire -%}
             <h5 class="text-l mb-2">
-                <span class="font-bold"><i class="fas fa-music"></i></span>
-                {{ repertoire }}
+                <span class="font-bold"><i class="fas fa-music"></i></span
+                >&nbsp; {{ repertoire }}
             </h5>
             {%- endif -%}
             <p class="text-justify mt-10 mb-10">{{ texte | nl2br | safe }}</p>
             <p>{{ formation | nl2br | safe }}</p>
             <p>{{ interpretes | nl2br | safe }}</p>
             <p class="mt-8">
-                <span class="font-bold"><i class="fas fa-envelope"></i></span>
-                {{ contact }}
+                <span class="font-bold"><i class="fas fa-envelope"></i></span
+                >&nbsp; {{ contact }}
             </p>
         </div>
         <div class="flex-grow flex items-center mt-5">
